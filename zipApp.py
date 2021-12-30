@@ -14,8 +14,8 @@ root.title('Air Quality Info')
 root.geometry("440x25")
 
 try:
-    adress = "https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=" + zip + "&distance=5&API_KEY=B55A7332-8E1B-4F17-84CC-557B195AF970"
-    api_r = requests.get(adress)
+    address = "https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=" + zip + "&distance=5&API_KEY=B55A7332-8E1B-4F17-84CC-557B195AF970"
+    api_r = requests.get(address)
     api = json.loads(api_r.content)
     city = api[0]['ReportingArea']
     quality = api[0]['AQI']
